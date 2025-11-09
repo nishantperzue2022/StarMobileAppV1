@@ -12,7 +12,7 @@ public partial class WelcomePage : ContentPage
     private async void OnRegisterClicked(object sender, EventArgs e)
     {
 
-        await Navigation.PushAsync(new RegisterPage());
+        await Navigation.PushAsync(new RegDataPage());
     }
 
     private async void OnLoginClicked(object sender, EventArgs e)
