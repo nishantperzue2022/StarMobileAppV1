@@ -1,4 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
+using Mopups.Hosting;
+using Mopups.Interfaces;
+using Mopups.Services;
+using StartApp.Views.Auth;
 
 namespace StartApp
 {
@@ -9,15 +13,17 @@ namespace StartApp
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .ConfigureMopups()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 
                     // Plus Jakarta Sans
-                    fonts.AddFont("PlusJakartaSans-Bold.ttf", "JakartaSansBold");
-                    fonts.AddFont("PlusJakartaSans-Medium.ttf", "JakartaSansMedium");
-                    fonts.AddFont("PlusJakartaSans-Regular", "JakartaSansRegular");
+                    fonts.AddFont("PlusJakartaSans-Bold.ttf", "JakartaBold");
+                    fonts.AddFont("PlusJakartaSans-Medium.ttf", "JakartaMedium");
+                    fonts.AddFont("PlusJakartaSans-Regular.ttf", "JakartaRegular");
+                    fonts.AddFont("PlusJakartaSans-SemiBold.ttf", "JakartaSemiBold");
 
                     // Roboto
                     fonts.AddFont("Roboto-Bold.ttf", "Robotobold");
@@ -30,7 +36,8 @@ namespace StartApp
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+       
+            //builder.Services.AddTransient<RegisterPage>();
             return builder.Build();
         }
     }

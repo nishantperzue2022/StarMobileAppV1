@@ -8,8 +8,12 @@ namespace StartApp
         {
             InitializeComponent();
 
-           // MainPage = new AppShell();
-            MainPage = new WelcomePage();
+            // MainPage = new AppShell();
+            MainPage = new NavigationPage(new WelcomePage())
+            {
+                BarBackgroundColor = Colors.White,
+                BarTextColor = Colors.Black
+            };
 
         }
     }

@@ -4,36 +4,54 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="WelcomePage"
-    BackgroundColor="#F8FAFC">
+    BackgroundColor="#F8FAFC"
+    NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout
         Padding="40"
-        Spacing="30"
+        Spacing="40"
         VerticalOptions="Center">
+        <Image HeightRequest="100" Source="dotnet_bot.png" />
+
 
         <Label
             FontFamily="JakartaSemiBold"
             FontSize="28"
             HorizontalOptions="Center"
-            Text="Welcome to SafeLife Insurance"
+            HorizontalTextAlignment="Center"
+            Text="Welcome to Star Insurance"
             TextColor="#1E293B" />
 
         <Label
-            Margin="0,0,0,20"
+            Margin="0,0,0,30"
             FontFamily="RobotoRegular"
             FontSize="18"
             HorizontalOptions="Center"
             HorizontalTextAlignment="Center"
-            Text="Protect what matters most with our trusted plans."
+            Text="Your trusted partner in protecting what matters most."
             TextColor="#475569" />
 
-        <Button
-            BackgroundColor="#2563EB"
-            Clicked="OnGetStartedClicked"
-            CornerRadius="14"
-            FontFamily="JakartaSemiBold"
-            FontSize="18"
-            HeightRequest="55"
-            Text="Get Started"
-            TextColor="White" />
+        <VerticalStackLayout Spacing="15">
+            <Button
+                BackgroundColor="{StaticResource Primary}"
+                Clicked="OnRegisterClicked"
+                CornerRadius="14"
+                FontFamily="JakartaSemiBold"
+                FontSize="15"
+                HeightRequest="55"
+                Text="Register"
+                TextColor="White" />
+
+            <Button
+                BackgroundColor="White"
+                BorderColor="{StaticResource Primary}"
+                BorderWidth="2"
+                Clicked="OnLoginClicked"
+                CornerRadius="14"
+                FontFamily="JakartaSemiBold"
+                FontSize="15"
+                HeightRequest="55"
+                Text="Login"
+                TextColor="{StaticResource Primary}" />
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

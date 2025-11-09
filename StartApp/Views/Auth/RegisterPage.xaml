@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StartApp.Views.Auth.RegisterPage"
-             Title="RegisterPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+<ContentPage
+    x:Class="StartApp.Views.Auth.RegisterPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Register">
+    <VerticalStackLayout Padding="30" Spacing="15">
+        <Label
+            FontFamily="JakartaSemiBold"
+            FontSize="24"
+            Text="Welcome Back" />
+        <Entry Keyboard="Email" Placeholder="Email" />
+        <Entry IsPassword="True" Placeholder="Password" />
+        <Button
+            x:Name="btnLogin"
+            BackgroundColor="#2563EB"
+            Clicked="btnLogin_Clicked"
+            CornerRadius="10"
+            Text="Login"
+            TextColor="White" />
     </VerticalStackLayout>
 </ContentPage>
