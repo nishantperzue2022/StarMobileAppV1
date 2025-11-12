@@ -3,6 +3,7 @@ using Mopups.Hosting;
 using Mopups.Interfaces;
 using Mopups.Services;
 using StartApp.Views.Auth;
+using Syncfusion.Maui.Toolkit.Hosting;
 
 namespace StartApp
 {
@@ -14,6 +15,7 @@ namespace StartApp
             builder
                 .UseMauiApp<App>()
                 .ConfigureMopups()
+                .ConfigureSyncfusionToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

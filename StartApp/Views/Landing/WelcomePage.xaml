@@ -8,17 +8,30 @@
     NavigationPage.HasNavigationBar="False">
     <VerticalStackLayout
         Padding="40"
+        HorizontalOptions="Center"
         Spacing="40"
         VerticalOptions="Center">
-        <Image HeightRequest="100" Source="dotnet_bot.png" />
 
+        <Frame
+            Padding="0"
+            BackgroundColor="Transparent"
+            BorderColor="{StaticResource Primary}"
+            CornerRadius="80"
+            HasShadow="False"
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            IsClippedToBounds="True"
+            VerticalOptions="Center"
+            WidthRequest="150">
+            <Image Aspect="AspectFit" Source="starlogo.png" />
+        </Frame>
 
         <Label
             FontFamily="JakartaSemiBold"
-            FontSize="28"
+            FontSize="24"
             HorizontalOptions="Center"
             HorizontalTextAlignment="Center"
-            Text="Welcome to Star Insurance"
+            Text="Welcome to Star Discover Insurance"
             TextColor="#1E293B" />
 
         <Label
@@ -27,7 +40,7 @@
             FontSize="18"
             HorizontalOptions="Center"
             HorizontalTextAlignment="Center"
-            Text="Your trusted partner in protecting what matters most."
+            Text="We’re here to safeguard your life, assets, and peace of mind.Reliable protection, whenever and wherever you need it."
             TextColor="#475569" />
 
         <VerticalStackLayout Spacing="15">
@@ -38,13 +51,13 @@
                 FontFamily="JakartaSemiBold"
                 FontSize="15"
                 HeightRequest="55"
-                Text="Register"
+                Text="Create Account"
                 TextColor="White" />
 
             <Button
                 BackgroundColor="White"
                 BorderColor="{StaticResource Primary}"
-                BorderWidth="2"
+                BorderWidth="1"
                 Clicked="OnLoginClicked"
                 CornerRadius="14"
                 FontFamily="JakartaSemiBold"
