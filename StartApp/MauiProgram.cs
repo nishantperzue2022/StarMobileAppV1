@@ -31,12 +31,13 @@ namespace StartApp
                     fonts.AddFont("Roboto-Bold.ttf", "Robotobold");
                     fonts.AddFont("Roboto-Medium.ttf", "RobotoMedium");
                     fonts.AddFont("Roboto-Regular.ttf", "RobotoRegular");
-
+                    fonts.AddFont("SyncFontIcons.ttf", "SyncFontIcons");
+                    fonts.AddFont("SegmentIcon.ttf", "SegmentIcon");
 
                 });
-
+            builder.ConfigureSampleBrowserBase();
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
        
             //builder.Services.AddTransient<RegisterPage>();

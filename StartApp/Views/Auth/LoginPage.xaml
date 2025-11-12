@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+<local:SampleView
     x:Class="StartApp.Views.Auth.LoginPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:StartApp.Controls"
+    xmlns:control="clr-namespace:StartApp.Controls"
     xmlns:customView="clr-namespace:StartApp.CustomView"
+    xmlns:local="clr-namespace:StartApp.Views"
     xmlns:localcore="clr-namespace:StartApp;assembly=StartApp"
     xmlns:otpInput="clr-namespace:Syncfusion.Maui.Toolkit.OtpInput;assembly=Syncfusion.Maui.Toolkit"
     xmlns:popup="clr-namespace:Syncfusion.Maui.Toolkit.Popup;assembly=Syncfusion.Maui.Toolkit"
     xmlns:textInput="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+    xmlns:viewModels="clr-namespace:StartApp.ViewModels"
     Title="Login">
+
+
+    <!--<local:SampleView.BindingContext>
+        <viewModels:SignUpViewModel />
+    </local:SampleView.BindingContext>
+
+    <local:SampleView.Behaviors>
+        <behaviors:SignUpBehavior />
+    </local:SampleView.Behaviors>-->
+    <local:SampleView.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Popupstyle" TargetType="popup:SfPopup">
+                <Setter Property="PopupStyle">
+                    <Setter.Value>
+                        <popup:PopupStyle CornerRadius="12" HasShadow="True" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+        <control:FirstFourNumberConverter x:Key="NumberFormatConverter" />
+    </local:SampleView.Resources>
+
 
 
     <Grid>
@@ -147,7 +173,7 @@
                 ColumnSpacing="15"
                 VerticalOptions="Center">
                 <!--  Back Button  -->
-                <!--<Border
+                <Border
                     Grid.Column="0"
                     Margin="2,0,0,0"
                     BackgroundColor="Transparent"
@@ -158,7 +184,7 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="30" />
                     </Border.StrokeShape>
-                    <customView:SfEffectsViewAdv x:Name="ConfirmOtpBackButton">
+                    <control:SfEffectsViewAdv x:Name="ConfirmOtpBackButton">
                         <Label
                             FontFamily="MauiSampleFontIcon"
                             FontSize="28"
@@ -167,8 +193,8 @@
                             TextColor="{AppThemeBinding Light={StaticResource IconColourLight},
                                                         Dark={StaticResource IconColourDark}}"
                             VerticalOptions="Center" />
-                    </customView:SfEffectsViewAdv>
-                </Border>-->
+                    </control:SfEffectsViewAdv>
+                </Border>
 
                 <!--  Title  -->
                 <Label
@@ -409,4 +435,4 @@
         </Grid>
     </Grid>
 
-</ContentPage>
+</local:SampleView>
