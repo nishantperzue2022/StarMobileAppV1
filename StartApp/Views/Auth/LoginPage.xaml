@@ -15,13 +15,13 @@
     Title="Login">
 
 
-    <!--<local:SampleView.BindingContext>
+    <local:SampleView.BindingContext>
         <viewModels:SignUpViewModel />
     </local:SampleView.BindingContext>
 
     <local:SampleView.Behaviors>
         <behaviors:SignUpBehavior />
-    </local:SampleView.Behaviors>-->
+    </local:SampleView.Behaviors>
     <local:SampleView.Resources>
         <ResourceDictionary>
             <Style x:Key="Popupstyle" TargetType="popup:SfPopup">
@@ -150,8 +150,8 @@
                 VerticalOptions="End">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="Have an account? " TextColor="{AppThemeBinding Light={StaticResource TextColourAlt1Light}, Dark={StaticResource TextColourAlt1Dark}}" />
-                        <Span Text="Login" TextColor="{StaticResource Blue100Accent}">
+                        <Span Text="Don't have an account? " TextColor="{AppThemeBinding Light={StaticResource TextColourAlt1Light}, Dark={StaticResource TextColourAlt1Dark}}" />
+                        <Span Text="Register" TextColor="{StaticResource Blue100Accent}">
                             <Span.GestureRecognizers>
                                 <TapGestureRecognizer />
                             </Span.GestureRecognizers>

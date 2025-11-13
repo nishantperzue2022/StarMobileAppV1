@@ -1,5 +1,3 @@
-using Mopups.Interfaces;
-using Mopups.Pages;
 using Mopups.Services;
 using StartApp.Nofitications;
 
