@@ -1,6 +1,6 @@
 namespace StartApp.Views.Auth;
 
-public partial class RegisterPage : ContentPage
+public partial class RegisterPage : SampleView
 {
 	public RegisterPage()
 	{
